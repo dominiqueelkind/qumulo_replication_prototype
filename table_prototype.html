@@ -8,7 +8,9 @@
 
 <body>
 
-<div id="title">Replication</div>	
+<div id="title">Replication</div>
+<div id="subtitle">Relationships</div>
+<div id="primary_btn"><div class="btn_bg">Create Relationship</div></div>
 
 <table width="100%" border="0" cellspacing="0" cellpadding="15" id="replication">
   <tbody>
@@ -31,7 +33,7 @@
 <!--END replication awaiting authorization svg-->
 Awaiting authorization
 		</td>
-      <td class="table_row" valign="top">abcdf</td>
+      <td class="table_row" valign="top"><div class="progress"></div></td>
       <td class="table_row" valign="top">/directory/<br/>
 		  <span class="sm_txt">source</span><br/>
 		  /directory/<br/>
@@ -97,7 +99,14 @@ Awaiting authorization
 <!--END replication enabled in progress svg-->	
 In progress
 		</td>
-      <td class="table_row" valign="top">&nbsp;</td>
+      <td class="table_row" valign="top">
+		  <div class="progress">
+  <b class="progress__bar">
+    <span class="progress__text">
+      <em>0%</em>
+    </span>
+  </b>
+</div></td>
       <td class="table_row" valign="top">/directory/<br/>
 		  <span class="sm_txt">source</span><br/>
 		  /directory/<br/>
@@ -151,7 +160,11 @@ In progress
 <!--END replication enabled in sync svg-->	
 Complete
 		</td>
-      <td class="table_row">&nbsp;</td>
+      <td class="table_row"><div class="progress">
+  <div class="complete"><span class="complete__text">
+      100%
+    </span></div>
+</div></td>
       <td class="table_row">/directory/<br/>
 		  <span class="sm_txt">source</span><br/>
 		  /directory/<br/>
@@ -203,7 +216,7 @@ Complete
 </svg>
 <!--END replication disabled svg-->		
 <span class="disabled">Disabled</span></td>
-      <td class="table_row">&nbsp;</td>
+      <td class="table_row"><div class="progress"></div></td>
       <td class="table_row">/directory/<br/>
 		  <span class="sm_txt">source</span><br/>
 		  /directory/<br/>
@@ -255,7 +268,7 @@ Complete
 <!--END replication enabled in blackout svg-->	
 	<span class="disabled">In blackout window</span><br/>
 		  <span class="disabled" style="padding-left: 35px">active Wed Jan 17 18:00:00 2018</span></td>
-      <td class="table_row">&nbsp;</td>
+      <td class="table_row"><div class="progress"></div></td>
       <td class="table_row">/directory/<br/>
 		  <span class="sm_txt">source</span><br/>
 		  /directory/<br/>
@@ -357,7 +370,10 @@ function sortTable(n) {
     }
   }
 }
-</script>	
+</script>
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="js/progress.js"></script>
+	
 </body>
 </html>
