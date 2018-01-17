@@ -10,6 +10,9 @@ body {
 	color: #fff;
 }
 
+h4 { font-size: 1.15em; line-height:inherit; margin-bottom: -10px; }
+.time { font-size: 2em; letter-spacing: 2px; }
+
 a {
 	font-weight: bold;
 	color: #009AE3;
@@ -57,8 +60,13 @@ a:active {
 	font-weight: bold;
 }
 
+#main_container { 
+	width: 100%; 
+	clear: both; 
+}
+
 /* table */
-#table_header { 
+.table_header { 
 	background-color: #333;
 	color: #999;
 	margin: auto;
@@ -66,10 +74,12 @@ a:active {
 	cursor: pointer;
 }
 
-#replication {
+.replication {
 	color: white;
 	margin: auto;
 	text-align: left;
+	float: left;
+	clear: left;
 }
 
 .table_row { 
@@ -228,4 +238,25 @@ a:active {
   100% {
     background-position: 150% center, right center, left center;
   }
+}
+
+/* columns */
+.left_column {
+	width: 30%;
+	height: 50vh;
+	float: left;
+	clear: both;
+	padding: 0 20px 0 0;
+	margin-top: 20px;
+	border-right: 1px solid #4a4a4a;
+}
+
+.right_column {
+	width: 30%;
+	height: 50vh;
+	float: left;
+	clear: none;
+	padding: 0 10px 0 40px;
+	margin-top: 20px;
+	border-right: 1px solid #4a4a4a;
 }
